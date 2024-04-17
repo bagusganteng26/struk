@@ -19,6 +19,18 @@ struct Mahasiswa {
     
 };
 
+void cetak (Mahasiswa data) {
+    cout << "Nama Mahasiswa : " << data.nama << endl;
+    cout << "NIM Mahasiswa : " << data.nim << endl;
+    cout << "Jurusan Mahasiswa : " << data.jurusan << endl;
+    cout << "Umur Mahasiswa : " << data.umur << endl;
+    cout << "Alamat Mahasiswa :" << data.alamat.kota << endl;
+    cout << "Nama Kampus Mahasiswa : " << data.kp.namaKampus << endl;
+    cout << "Alamat kampus Mahasiswa : " << data.kp.alamatKampus << endl;
+    cout << "Tahun beridir kampus Mahasiswa : " << data.kp.tahun << endl;
+    cout << endl;
+}
+
 int main () {
 
     Mahasiswa mhs[5];
@@ -32,31 +44,18 @@ int main () {
     mhs[0].kp.tahun = 1945;
     mhs[0].alamat.kota = "Kudus";
 
-    cout << "Nama Mahasiswa 1 : " << mhs[0].nama << endl;
-    cout << "NIM Mahasiswa 1 : " << mhs[0].nim << endl;
-    cout << "Jurusan Mahasiswa 1 : " << mhs[0].jurusan << endl;
-    cout << "Umur Mahasiswa 1 : " << mhs[0].umur << endl;
-    cout << "Alamat Mahasiswa 1 :" << mhs[0].alamat.kota << endl;
-    cout << "Nama Kampus Mahasiswa 1 : " << mhs[0].kp.namaKampus << endl;
-    cout << "Alamat kampus Mahasiswa 1 : " << mhs[0].kp.alamatKampus << endl;
-    cout << "Tahun beridir kampus Mahasiswa 1 : " << mhs[0].kp.tahun << endl;
-    cout << endl;
+    cetak(mhs[0]);
 
-    mhs[1] = {"202311003", "Eko Wijayanto", "Elektro", 19};
+    mhs[1].nama = "Eko Wijayanto";
+    mhs[1].nim = "202311003";
+    mhs[1].jurusan = "Manajemen";
+    mhs[1].umur = 19;
+    mhs[1].kp.namaKampus = "Sekolah Tinggi Teknik Pati";
+    mhs[1].kp.alamatKampus = "Pati";
+    mhs[1].kp.tahun = 1945;
+    mhs[1].alamat.kota = "Rembang";
 
-    cout << "Nama Mahasiswa 2 : " << mhs[1].nama << endl;
-    cout << "NIM Mahasiswa 2 : " << mhs[1].nim << endl;
-    cout << "Jurusan Mahasiswa 2 : " << mhs[1].jurusan << endl;
-    cout << "Umur Mahasiswa 2 : " << mhs[1].umur << endl;
-    cout << endl;
-
-    mhs[2] = {"202311004", "Yanto", "Manajemen", 20};
-
-    cout << "Nama Mahasiswa 3 : " << mhs[2].nama << endl;
-    cout << "NIM Mahasiswa 3 : " << mhs[2].nim << endl;
-    cout << "Jurusan Mahasiswa 3 : " << mhs[2].jurusan << endl;
-    cout << "Umur Mahasiswa 3 : " << mhs[2].umur << endl;
-    cout << endl;
+    cetak(mhs[1]);
 
     return 0;
 }
